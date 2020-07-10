@@ -1,0 +1,162 @@
+baidu 
+	passwprd:mnbuhb1009
+	uas:jiugui1001
+	phon:+855 964855926
+
+
+
+cocos
+	用户名:	yg_jiugui
+	密码:	mnbuhb1009
+	邮箱:	yg.jiugui@gmail.com
+
+google
+	user:yg.jiugui@gmail.com
+	passwprd:mnbuhb1009
+
+www.applex.net
+	name:jiugui
+	user:yg.jiugui@gmail.com
+	passwprd:mnbuhb1009
+
+http://imacos.top/
+	name:jiugui
+	user:yg.jiugui@gmail.com
+	passwprd:mnbuhb1009
+
+github.com
+	用户名：yg-jiugui
+	邮箱：yg.jiugui@gmail.com
+	passwprd:mnbuhb1009
+
+unity
+	用户名：yg-jiugui
+	邮箱：yg.jiugui@gmail.com
+	passwprd:Amnbuhb1009
+
+mysql
+	password:KILL^jiugui1009
+
+
+
+wifi 
+	self:017946474
+	work:asus#123
+
+
+SVN
+	用户名：jiugui
+	密码：123456
+
+禅道
+	用户名：jiugui
+	密码：jiugui123321..
+
+windows 用户名
+	用户名： jiugui
+	密码：0000
+
+	用户名： yg
+	密码：\\\\
+
+Android debug runCmd
+	：adb logcat|findstr "chrome-devtools"
+
+
+LesterParkerpZzU@yahoo.com----ijukhuooeeydofxy 开发者密码：Heiye2121shp 开发者账号原始密保对应的三个问题和答案： 1、What is first name of your best friend in high school? ——q111vq 2、What is your dream job? ——w222cc 3、In what city did your parents meet? ——e333ff 绑定手机：+855 885969887 生日：1984年09月28日
+
+BerylIngramiTtN@yahoo.com----nwqnltaygspbrfqf 开发者密码：Heiye2121shp 开发者账号原始密保对应的三个问题和答案： 1、What is first name of your best friend in high school? ——q111vq 2、What is your dream job? ——w222cc 3、In what city did your parents meet? ——e333ff 绑定手机：+855 885969887 生日：1984年09月28日
+
+wifi
+	qp-888
+	RM110120
+
+
+unity Debug Android
+	Bundle Identifier。例如：com.Company.aaa。
+	adb forward tcp:34999 localabstract:Unity-这里加你的包名
+	（3）打开游戏的时候，同时打开window->profiler，然后选择选择AndroidProfiler(ADB@127.0.0.1:34999)，连上即可。
+
+
+	adb forward tcp:34999 localabstract:Unity-你的包名
+	2017用34999，早期版本好像是54999
+	adb forward --list
+	查看端口映射
+	adb forward --remove-all
+	移除所有端口映射
+	lsof -i tcp:34999
+	查看端口的监听情况
+	COMMAND PID USER FD TYPE DEVICE SIZE/OFF NODE NAME
+	Unity 8733 whitebai 43u IPv4 0xa03011b612a28e7f 0t0 TCP localhost:57698->localhost:34999 (ESTABLISHED)
+	Unity 8733 whitebai 47u IPv4 0xa03011b5fc33ac8f 0t0 TCP localhost:34999->localhost:57698 (ESTABLISHED)
+	Unity 8733 whitebai 61u IPv4 0xa03011b61298f397 0t0 TCP *:34999 (LISTEN)
+	两个listen，两个 established，基本就ok了
+	注意，好像2017无法用il2cpp，必须用mono
+
+xlua Android 编译
+	Cmake 	v = D:\Android\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe
+	NDK 	v = ANDROID_NDK : 	D:\Android\ndk\android-ndk-r10e
+
+
+ស្រីនាង
+
+非字串使用 System.BitConverter.GetBytes()方法，先读入字节数组中，然后再用Array.Reverse()对byte数组反序一下，得到大端序字节数组。
+byte[] a=System.BitConverter.GetBytes(x);   //得到小端字节序数组
+Array.Reverse(a);   //反转数组转成大端。
+另外c#直接提供了网络字节序转换方法。
+System.Net.IPAddress.HostToNetworkOrder（本机到网络转换）
+System.Net.IPAddress.NetworkToHostOrder(网络字节转成本机)
+推荐使用这种方法，简单有效。
+代码示例：
+short x = 6;
+short b = System.Net.IPAddress.HostToNetworkOrder(x);        //把x转成相应的大端字节数
+byte[] bb = System.BitConverter.GetBytes(b);        //这样直接取到的就是大端字节序字节数组。
+对于字符串型：使用 System.Text.Encoding.Default.GetBytes();直接取字串对应字节数组。
+
+
+chmod 文件权限获取
+mkdir 文件管理
+
+sed -i 's/\r$//' run_login.sh  解决 bash: ./run_login.sh：/bin/sh^M：解释器错误: 没有那个文件或目录
+
+ubuntu mysql 配置mysql允许远程连接的方法
+	默认情况下，mysql只允许本地登录，如果要开启远程连接，则需要修改/etc/mysql/my.conf文件。
+
+	一、修改/etc/mysql/my.conf
+	找到bind-address = 127.0.0.1这一行
+	改为bind-address = 0.0.0.0即可
+
+	二、为需要远程登录的用户赋予权限
+	1、新建用户远程连接mysql数据库
+	grant all on *.* to admin@'%' identified by '123456' with grant option;
+	flush privileges;
+	允许任何ip地址(%表示允许任何ip地址)的电脑用admin帐户和密码(123456)来访问这个mysql server。
+	注意admin账户不一定要存在。
+
+	2、支持root用户允许远程连接mysql数据库
+	grant all privileges on *.* to 'root'@'%' identified by '123456' with grant option;
+	flush privileges;
+
+
+ubuntu 编译skynet需要安装的组件
+	安装 autoconf
+	apt-get install autoconf
+	安装 libreadline-dev
+	apt-get install libreadline-dev
+
+	另补充，在centos中。编译skynet/3rd/jemalloc模块需要额外安装autoconf,readline,命令
+	yum -y install autoconf
+	yum -y install readline-devel
+
+
+redis.后端模式启动
+	修改redis.conf配置文件， daemonize yes 以后端模式启动
+ubuntu:
+	1.防火墙的打开
+	sudo ufw enable
+	2.防火墙的重启
+	sudo ufw reload
+	3.打开想要的端口（以9000为例）
+	ufw allow 9000
+	4.查看本机端口使用情况
+	ufw status
